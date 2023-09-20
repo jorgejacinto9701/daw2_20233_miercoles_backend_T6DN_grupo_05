@@ -49,7 +49,7 @@ public class Sala {
 
 	@JsonIgnoreProperties({ "hibernateLazyInitializer", "handler" })
 	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "idSesde")
+	@JoinColumn(name = "idSede")
 	private DataCatalogo sede;
 	
 	@JsonIgnoreProperties({ "hibernateLazyInitializer", "handler" })

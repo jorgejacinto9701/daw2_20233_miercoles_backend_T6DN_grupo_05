@@ -47,6 +47,11 @@ public class Tesis {
 	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd hh:mm:ss")
 	private Date fechaRegistro;
 
+	
+	@Temporal(TemporalType.TIMESTAMP)
+	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd hh:mm:ss")
+	private Date fechaActualizacion;
+	
 	private int estado;
 
 	@JsonIgnoreProperties({ "hibernateLazyInitializer", "handler" })
