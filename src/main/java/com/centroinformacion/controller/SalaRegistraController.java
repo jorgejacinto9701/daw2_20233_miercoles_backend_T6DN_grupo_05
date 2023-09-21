@@ -48,7 +48,7 @@ public class SalaRegistraController {
 		if (objSalida == null) {
 			salida.put("mensaje","Error en el registro");
 		}else {
-			salida.put("mensaje","Se registró la Ejemplo con el ID ==> " + objSalida.getIdSala());
+			salida.put("mensaje","Se registró la Sala con el ID ==> " + objSalida.getIdSala());
 		}
 		return ResponseEntity.ok(salida);
 	}
