@@ -32,4 +32,9 @@ public class UsuarioServiceImpl implements UsuarioService{
 		return repository.findByLogin(login);
 	}
 
+	@Override
+	public Usuario findById(int idUsuario) {
+		return repository.findById(idUsuario).orElse(null);
+	}
+
 }
