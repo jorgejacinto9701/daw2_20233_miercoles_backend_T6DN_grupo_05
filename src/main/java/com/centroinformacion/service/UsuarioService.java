@@ -13,4 +13,6 @@ public interface UsuarioService {
 	public abstract List<Rol> traerRolesDeUsuario(int idUsuario);
 
 	public abstract Usuario buscaPorLogin(String login);
+	
+	public abstract Usuario findById(int idUsuario);
 }
