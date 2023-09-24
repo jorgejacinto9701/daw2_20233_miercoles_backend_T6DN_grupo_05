@@ -20,6 +20,11 @@ public class LibroServiceimp  implements  LibroService{
     }
 
     @Override
+    public Libro actualiza(Libro libro) {
+        return libroRepository.save(libro);
+    }
+
+    @Override
     public List<Libro> listaLibro() {
         return libroRepository.findAll();
     }
