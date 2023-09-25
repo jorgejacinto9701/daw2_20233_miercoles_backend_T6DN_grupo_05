@@ -19,5 +19,11 @@ public class AlumnoServiceImp implements AlumnoService {
 		return repository.findByOrderByApellidosAsc();
 	}
 
+	@Override
+	public Alumno registrarAlumno(Alumno alumno) {
+		return    repository.save(alumno);
+		
+	}
+
 	
 }
