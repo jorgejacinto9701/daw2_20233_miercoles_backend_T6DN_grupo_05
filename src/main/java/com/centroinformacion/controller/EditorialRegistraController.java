@@ -79,7 +79,7 @@ public class EditorialRegistraController {
 			salida.put("mensaje", "Se registró la Editorial con el ID => " + objSalida.getIdEditorial());
 		}
 		
-		return ResponseEntity.ok(obj);
+		return ResponseEntity.ok(salida);
 	}
 	
 
