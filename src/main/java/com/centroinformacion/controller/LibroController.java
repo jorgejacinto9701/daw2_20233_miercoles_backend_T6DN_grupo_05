@@ -37,16 +37,6 @@ public class LibroController {
         libro.setFechaRegistro(new Date());
         libro.setEstado(AppSettings.ACTIVO);
 
-
-        DataCatalogo tipoLibro = new DataCatalogo();
-        tipoLibro.setIdDataCatalogo(15);
-        libro.setTipoLibro(tipoLibro);
-
-
-        DataCatalogo categoria = new DataCatalogo();
-        categoria.setIdDataCatalogo(1);
-        libro.setCategoriaLibro(categoria);
-
         DataCatalogo estadoPrestamo = new DataCatalogo();
         estadoPrestamo.setIdDataCatalogo(27);
         libro.setEstadoPrestamo(estadoPrestamo);
