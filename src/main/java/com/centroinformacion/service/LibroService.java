@@ -1,11 +1,8 @@
 package com.centroinformacion.service;
 
-import com.centroinformacion.entity.Autor;
-import com.centroinformacion.entity.Ejemplo;
-import com.centroinformacion.entity.Libro;
-import org.springframework.stereotype.Service;
-
 import java.util.List;
+
+import com.centroinformacion.entity.Libro;
 
 
 
