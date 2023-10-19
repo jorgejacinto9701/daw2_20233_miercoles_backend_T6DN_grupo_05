@@ -36,7 +36,7 @@ public class TesisRegistraController {
 	    @ResponseBody
 	    public ResponseEntity<?> registrar(@RequestBody Tesis tesis){
 	        HashMap<String, Object> salida = new HashMap<>();
-
+ 
 	        tesis.setFechaActualizacion(new Date());
 	        tesis.setFechaRegistro(new Date());
 	        tesis.setEstado(AppSettings.ACTIVO);
