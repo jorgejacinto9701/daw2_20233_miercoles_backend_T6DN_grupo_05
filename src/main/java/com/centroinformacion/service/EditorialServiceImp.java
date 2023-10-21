@@ -25,4 +25,21 @@ public class EditorialServiceImp implements EditorialService {
 		return repositorio.findAll();
 	}
 
+	@Override
+	public Editorial actualizaEditorial(Editorial obj) {
+		return repositorio.save(obj);
+	}
+
+	@Override
+	public void eliminaEditorial(int idEditorial) {
+		repositorio.deleteById(idEditorial);
+	}
+
+	@Override
+	public List<Editorial> listaEditorialPorRazonLike(String razon) {
+		return repositorio.listaPorRazonLike(razon);
+	}
+
+
+
 }
