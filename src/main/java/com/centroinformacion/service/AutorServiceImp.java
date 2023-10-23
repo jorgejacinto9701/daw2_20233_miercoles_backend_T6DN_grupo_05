@@ -27,4 +27,23 @@ public class AutorServiceImp implements AutorService{
     public Autor actualizar(Autor a) {
         return serAutor.save(a);
     }
+
+    @Override
+    public List<Autor> buscarNombreLike(String nombre) {
+        return serAutor.listaPorNombreLike(nombre) ;
+    }
+
+    @Override
+    public void eliminar(int id) {
+        Autor a = new Autor();
+        a= serAutor.findById(id).orElse(null);
+        if(a!=null){
+            serAutor.delete(a);
+        }
+    }
+
+    @Override
+    public Autor buscarPorId(int id) {
+        return serAutor.findById(id).orElse(null);
+    }
 }
