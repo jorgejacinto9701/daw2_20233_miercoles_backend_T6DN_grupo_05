@@ -24,4 +24,22 @@ public class TesisServiceImp implements TesisService{
 		return repository.save(Tesis);
 		
 	}
+
+	@Override
+	public Tesis actualizaTesis(Tesis obj) {
+		// TODO Auto-generated method stub
+		return repository.save(obj);
+	}
+
+	@Override
+	public void eliminaTesis(int idTesis) {
+		// TODO Auto-generated method stub
+		repository.deleteById(idTesis);;
+	}
+
+	@Override
+	public List<Tesis> listaTesisPorTituloLike(String titulo) {
+		// TODO Auto-generated method stub
+		return repository.listaPorTituloLike(titulo);
+	}
 }
