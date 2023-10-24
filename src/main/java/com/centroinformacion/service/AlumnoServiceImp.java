@@ -10,20 +10,28 @@ import com.centroinformacion.repository.AlumnoRepository;
 
 @Service
 public class AlumnoServiceImp implements AlumnoService {
-
 	@Autowired
-	private AlumnoRepository repository;
+    private AlumnoRepository repository;
 
-	@Override
-	public List<Alumno> listaTodos() {
-		return repository.findByOrderByApellidosAsc();
-	}
+    @Override
+    public List<Alumno> listaTodos() {
+        return repository.findByOrderByApellidosAsc();
+    }
 
-	@Override
-	public Alumno registrarAlumno(Alumno alumno) {
-		return    repository.save(alumno);
-		
-	}
+    @Override
+    public Alumno registrarOActualizarAlumnos(Alumno a) {
+         return    repository.save(a);
+    }
+
+    @Override
+    public void eliminar(Alumno obj) {
+        repository.delete(obj);
+    }
+
+    @Override
+    public Alumno buscarPorId(int id) {
+        return repository.findById(id).orElse(null);
+    }
 
 	
 }
