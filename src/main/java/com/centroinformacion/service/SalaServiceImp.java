@@ -24,4 +24,13 @@ public class SalaServiceImp implements SalaService {
 		return repository.findAll();
 	}
 	
+	@Override
+	public void eliminaSala(int idSala) {
+		repository.deleteById(idSala);
+	}
+	
+	@Override
+	public List<Sala> listaSalaPorNumeroLike(String numero) {
+		return repository.listaPorNumeroLike(numero);
+	}
 }
