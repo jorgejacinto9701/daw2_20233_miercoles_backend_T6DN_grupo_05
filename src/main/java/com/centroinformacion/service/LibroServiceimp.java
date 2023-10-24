@@ -28,4 +28,13 @@ public class LibroServiceimp  implements  LibroService{
     public List<Libro> listaLibro() {
         return libroRepository.findAll();
     }
+    @Override
+    public List<Libro> listaLibroPorNombreLike(String nombre) {
+        return libroRepository.listaPorNombreLike(nombre);
+    }
+
+    @Override
+    public void eliminaLibro(int idLibro) {
+            libroRepository.deleteById(idLibro);
+    }
 }
