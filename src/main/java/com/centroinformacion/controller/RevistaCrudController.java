@@ -78,7 +78,6 @@ public class RevistaCrudController {
 		Map<String, Object> salida = new HashMap<>();
 		
 		try {
-			r.setFechaRegistro(new Date());
 			r.setFechaActualizacion(new Date());
 			
 			Revista nueva = service.actualizar(r);
