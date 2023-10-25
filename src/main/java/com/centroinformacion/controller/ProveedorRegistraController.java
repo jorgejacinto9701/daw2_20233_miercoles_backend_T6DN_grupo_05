@@ -2,10 +2,12 @@ package com.centroinformacion.controller;
 
 import java.util.Date;
 import java.util.HashMap;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,10 +22,17 @@ import com.centroinformacion.util.AppSettings;
 @RequestMapping("/url/proveedor")
 @CrossOrigin(origins = AppSettings.URL_CROSS_ORIGIN)
 public class ProveedorRegistraController {
-	
+
 	@Autowired
 	private ProveedorService proveedorService;
-
+	
+	@GetMapping
+	@ResponseBody
+	public ResponseEntity<List<Proveedor>> listaProveedor(){
+		List<Proveedor> lista = proveedorService.listaProveedor();
+		return ResponseEntity.ok(lista);
+	}
+	
 	@PostMapping
 	@ResponseBody
 	public ResponseEntity<?> inserta(@RequestBody Proveedor obj){
@@ -34,11 +43,11 @@ public class ProveedorRegistraController {
 		obj.setEstado(AppSettings.ACTIVO);
 		
 		
-		Proveedor objSalida = proveedorService.insertaActualizaProveedor(obj);
+		Proveedor objSalida = proveedorService.insertaActualizaProveedor(obj); 
 		if (objSalida == null) {
 			salida.put("mensaje","Error en el registro");
 		}else {
-			salida.put("mensaje","Se registró el proveedor con el ID ==> " + objSalida.getIdProveedor());
+			salida.put("mensaje","Se registró la Ejemplo con el ID ==> " + objSalida.getIdProveedor());
 		}
 		return ResponseEntity.ok(salida);
 	}
