@@ -10,6 +10,7 @@ import com.centroinformacion.entity.Sala;
 public interface SalaRepository extends JpaRepository<Sala, Integer>{
 	
 	
-	@Query("select x from Sala x where x.numero like ?1")
+	@Query("select s from Sala s where s.numero like ?1 ")
 	public List<Sala> listaPorNumeroLike(String numero);
+	
 }

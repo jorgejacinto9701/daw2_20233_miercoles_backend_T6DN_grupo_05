@@ -30,20 +30,20 @@ public class SalaCrudController {
 	@Autowired
 	private SalaService service;
 	
-	@GetMapping("/listaSalaPorNumeroLike/{num}")
+	@GetMapping("/listaSalaPorNumeroLike/{numero}")
 	@ResponseBody
-	public ResponseEntity<List<Sala>> listaSalaPorNumeroLike(@PathVariable("num") String num) {
-		List<Sala> lista  = null;
+	public ResponseEntity<List<Sala>> listaSalaPorNumeroLike(@PathVariable("numero") String numero) {
+		List<Sala> listanumero  = null;
 		try {
-			if (num.equals("todos")) {
-				lista = service.listaSalaPorNumeroLike("%");
+			if (numero.equals("todos")) {
+				listanumero = service.listaSalaPorNumeroLike("%");
 			}else {
-				lista = service.listaSalaPorNumeroLike("%" + num + "%");	
+				listanumero = service.listaSalaPorNumeroLike("%" + numero + "%");	
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		return ResponseEntity.ok(lista);
+		return ResponseEntity.ok(listanumero);
 	}
 	
 	@PostMapping("/insertaSala")
@@ -73,6 +73,8 @@ public class SalaCrudController {
 	public ResponseEntity<Map<String, Object>> actualizaSala(@RequestBody Sala obj) {
 		Map<String, Object> salida = new HashMap<>();
 		try {
+
+			obj.setFechaActualizacion(new Date());
 			Sala objSalida =  service.insertaActualizaSala(obj);
 			if (objSalida == null) {
 				salida.put("mensaje", Constantes.MENSAJE_ACT_ERROR);
