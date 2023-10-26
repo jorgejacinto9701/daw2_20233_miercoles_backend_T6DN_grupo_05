@@ -19,9 +19,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.centroinformacion.entity.Editorial;
-import com.centroinformacion.entity.Usuario;
 import com.centroinformacion.service.EditorialService;
-import com.centroinformacion.service.UsuarioService;
 import com.centroinformacion.util.AppSettings;
 
 @RestController
@@ -32,10 +30,7 @@ public class EditorialCrudController {
 	@Autowired
 	private EditorialService service;
 	
-	@Autowired
-	private UsuarioService servicioUsuario;
-	
-	
+
 	@GetMapping("/listaEditorialPorRazon/{razon}")
 	@ResponseBody
 	public ResponseEntity<List<Editorial>> listaEditorialPorRazonLike(@PathVariable("razon") String razon){

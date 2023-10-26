@@ -23,17 +23,17 @@ public class MainSecurity   {
     JwtEntryPoint jwtEntryPoint;
 
     @Bean
-    public JwtTokenFilter jwtTokenFilter(){
+    JwtTokenFilter jwtTokenFilter(){
         return new JwtTokenFilter();
     }
 
     @Bean
-    public PasswordEncoder passwordEncoder() {
+    PasswordEncoder passwordEncoder() {
       return new BCryptPasswordEncoder();
     }
-    
+
     @Bean
-    public DaoAuthenticationProvider authenticationProvider() {
+    DaoAuthenticationProvider authenticationProvider() {
         DaoAuthenticationProvider authProvider = new DaoAuthenticationProvider();
          
         authProvider.setUserDetailsService(userDetailsService);
@@ -41,14 +41,14 @@ public class MainSecurity   {
      
         return authProvider;
     }
-    
+
     @Bean
-    public AuthenticationManager authenticationManager(AuthenticationConfiguration authConfiguration) throws Exception {
+    AuthenticationManager authenticationManager(AuthenticationConfiguration authConfiguration) throws Exception {
       return authConfiguration.getAuthenticationManager();
     }
-    
+
     @Bean
-    public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
+    SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
     	 
     	http.csrf(csrf -> csrf.disable())
     	.exceptionHandling(exp -> exp.authenticationEntryPoint(jwtEntryPoint))
