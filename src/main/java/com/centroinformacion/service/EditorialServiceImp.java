@@ -40,6 +40,11 @@ public class EditorialServiceImp implements EditorialService {
 		return repositorio.listaPorRazonLike(razon);
 	}
 
+	@Override
+	public List<Editorial> listaDinamica(String razonSocial, String direccion, String ruc, int estado) {
+		return repositorio.listaConsultaDinamica(razonSocial, direccion, ruc, estado);
+	}
+
 
 
 }
