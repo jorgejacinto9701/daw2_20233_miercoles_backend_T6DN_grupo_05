@@ -51,7 +51,7 @@ public class SalaCrudController {
 	public ResponseEntity<Map<String, Object>> insertaSala(@RequestBody Sala obj) {
 		Map<String, Object> salida = new HashMap<>();
 		try {
-			obj.setIdSala(0);
+			
 			obj.setFechaRegistro(new Date());
 			obj.setFechaActualizacion(new Date());
 			obj.setEstado(AppSettings.ACTIVO);
