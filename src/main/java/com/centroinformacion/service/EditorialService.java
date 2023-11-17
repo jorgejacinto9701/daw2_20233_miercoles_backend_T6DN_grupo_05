@@ -11,4 +11,5 @@ public interface EditorialService {
 	public abstract Editorial actualizaEditorial(Editorial obj);
 	public abstract void eliminaEditorial(int idEditorial);
 	public abstract List<Editorial> listaEditorialPorRazonLike(String razon);
+	public abstract List<Editorial> listaDinamica(String razonSocial, String direccion, String ruc, int estado);
 }
