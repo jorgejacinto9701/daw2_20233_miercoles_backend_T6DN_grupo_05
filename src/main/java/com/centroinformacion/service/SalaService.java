@@ -11,4 +11,7 @@ public interface SalaService {
 	public abstract List<Sala> listaSalaPorNumeroLike(String numero);
 	
 	public abstract void eliminaSala(int idSala);
+	
+	//consulta
+	public List<Sala> listaConsultaDinamica(String nombre, int piso,String recursos, int estado,int idDataCatalogo);
 }
