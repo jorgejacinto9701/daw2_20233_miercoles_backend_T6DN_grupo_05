@@ -20,9 +20,11 @@ public interface SalaRepository extends JpaRepository<Sala, Integer> {
 	
 	@Query("select x from Sala x where (x.numero like ?1) and "
 									+ "(?2 = 0 or x.piso = ?2) and "
-									+ "(x.estado = ?3) and "
-									+ "(?4 = -1 or x.tipoSala.idDataCatalogo = ?4)")
-	public List<Sala> listaConsultaDinamica(String numero, int piso, int estado, int idTipoSala);
+									+ "(x.recursos like ?3) and "
+									+ "(x.estado = ?4) and "
+									+ "(?5 = -1 or x.tipoSala.idDataCatalogo = ?5) and"
+									+ "(?6 = -1 or x.sede.idDataCatalogo = ?6)")
+	public List<Sala> listaConsultaDinamica(String numero, int piso, String recursos, int estado, int idTipoSala,int idSede);
 
 	
 }

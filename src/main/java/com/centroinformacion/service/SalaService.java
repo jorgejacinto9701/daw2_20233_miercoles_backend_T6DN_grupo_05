@@ -13,6 +13,6 @@ public interface SalaService {
 	public abstract void eliminaSala(int idSala);
 
 	//consulta
-		public List<Sala> listaConsultaDinamica(String numero, int piso, int estado,int idTipoSala);
+		public List<Sala> listaConsultaDinamica(String numero, int piso, String recursos,int estado, int idTipoSala, int idSede);
 
 }
