@@ -3,6 +3,7 @@ package com.centroinformacion.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -24,13 +25,12 @@ public class SalaConsultaController {
 	@GetMapping("/consultaSalaPorParametros")
 	@ResponseBody
 	public List<Sala> listaConsultaSala( 
-					@RequestParam(name = "nombre" , required = false, defaultValue = "") String nombre,
-					@RequestParam(name = "piso" , required = false, defaultValue = "1") int piso,
-					@RequestParam(name = "recursos" , required = false, defaultValue = "") String recursos,
+					@RequestParam(name = "numero" , required = false, defaultValue = "") String numero,
+					@RequestParam(name = "piso" , required = false, defaultValue = "0") int piso,
 					@RequestParam(name = "estado" , required = true, defaultValue = "1") int estado,
-					@RequestParam(name = "idDataCatalogo" , required = false, defaultValue = "-1") int idDataCatalogo){
+					@RequestParam(name = "idTipoSala" , required = false, defaultValue = "-1") int idTipoSala){
 
-		List<Sala> lstSalida = service.listaConsultaDinamica("%"+ nombre + "%", piso, "%"+ recursos + "%", estado, idDataCatalogo);
+		List<Sala> lstSalida = service.listaConsultaDinamica("%"+ numero + "%", piso, estado, idTipoSala);
 		
 		return lstSalida;
 	}

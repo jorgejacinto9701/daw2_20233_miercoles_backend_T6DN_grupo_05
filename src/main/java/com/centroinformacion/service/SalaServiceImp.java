@@ -34,9 +34,10 @@ public class SalaServiceImp implements SalaService {
 		return repository.listaPorNumeroLike(numero);
 	}
 	
+	
 	@Override
-	public List<Sala> listaConsultaDinamica(String nombre, int piso, String recursos, int estado, int idDataCatalogo) {
-		return repository.listaConsultaDinamica(nombre, piso, recursos, estado, idDataCatalogo);
+	public List<Sala> listaConsultaDinamica(String numero, int piso, int estado, int idTipoSala) {
+		return repository.listaConsultaDinamica(numero, piso, estado, idTipoSala);
 	}
 
 }
