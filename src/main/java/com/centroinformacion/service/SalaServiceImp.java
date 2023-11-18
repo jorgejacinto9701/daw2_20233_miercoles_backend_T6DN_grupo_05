@@ -36,8 +36,8 @@ public class SalaServiceImp implements SalaService {
 	
 	
 	@Override
-	public List<Sala> listaConsultaDinamica(String numero, int piso, int estado, int idTipoSala) {
-		return repository.listaConsultaDinamica(numero, piso, estado, idTipoSala);
+	public List<Sala> listaConsultaDinamica(String numero, int piso, String recursos,int estado, int idTipoSala, int idSede) {
+		return repository.listaConsultaDinamica(numero, piso, recursos, estado, idTipoSala, idSede);
 	}
 
 }
