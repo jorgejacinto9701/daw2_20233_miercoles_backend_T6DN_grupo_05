@@ -19,7 +19,7 @@ public interface TesisService {
 	public List<Tesis> listaConsultaDinamicatesis
 	( String titulo ,String tema , int estado ,int alumno);
 
-
+ 
 
 
 	

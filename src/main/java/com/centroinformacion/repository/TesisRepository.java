@@ -20,5 +20,5 @@ public interface TesisRepository extends JpaRepository<Tesis, Integer>{
 				( String titulo ,String tema , int estado, int alumno);
 
 
-
+ 
 }
