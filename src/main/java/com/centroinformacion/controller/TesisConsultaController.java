@@ -26,7 +26,7 @@ public class TesisConsultaController {
 
 	@Autowired
 	private TesisService service;
-	
+	//consulta
 	@GetMapping("/consultaTesisPorParametros")
 	@ResponseBody 
 	  public List<Tesis> listaConsultaDocente(
