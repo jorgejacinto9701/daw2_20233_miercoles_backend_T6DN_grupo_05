@@ -37,4 +37,13 @@ public class LibroServiceimp  implements  LibroService{
     public void eliminaLibro(int idLibro) {
             libroRepository.deleteById(idLibro);
     }
+
+
+  @Override
+  public List<Libro> buscarLibros(String titulo, String anio, String serie, String estado) {
+      List<Libro> resultados = libroRepository.buscarLibros(titulo, anio, serie, estado);
+      return resultados;
+  }
+
+
 }
