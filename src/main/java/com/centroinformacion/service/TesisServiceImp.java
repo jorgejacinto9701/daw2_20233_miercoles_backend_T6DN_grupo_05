@@ -51,6 +51,6 @@ public class TesisServiceImp implements TesisService{
 	( String titulo ,String tema , int estado , int alumno){
 		return repository.listaConsultaDinamicatesis(titulo , tema , estado , alumno);
 	}
-	
+	 
 	
 }

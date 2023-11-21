@@ -38,6 +38,6 @@ public class TesisConsultaController {
 		List<Tesis> lstSalida = service.listaConsultaDinamicatesis("%"+ titulo + "%" , tema , estado , alumno ) ;
 		
 	        return lstSalida;       
-	}
-	
-}
+	} 
+	 
+} 
