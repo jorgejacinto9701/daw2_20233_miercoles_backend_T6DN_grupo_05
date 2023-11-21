@@ -1,8 +1,10 @@
 package com.centroinformacion.service;
 
+import java.sql.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Service;
 
 import com.centroinformacion.entity.Tesis;
@@ -42,4 +44,13 @@ public class TesisServiceImp implements TesisService{
 		// TODO Auto-generated method stub
 		return repository.listaPorTituloLike(titulo);
 	}
+
+
+	@Override
+	public List<Tesis> listaConsultaDinamicatesis
+	( String titulo ,String tema , int estado , int alumno){
+		return repository.listaConsultaDinamicatesis(titulo , tema , estado , alumno);
+	}
+	
+	
 }
