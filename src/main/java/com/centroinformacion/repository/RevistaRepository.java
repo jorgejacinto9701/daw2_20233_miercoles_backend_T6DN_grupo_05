@@ -6,7 +6,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
 import com.centroinformacion.entity.Revista;
-import com.centroinformacion.entity.Sala;
 
 public interface RevistaRepository extends JpaRepository<Revista, Integer> {
 	
