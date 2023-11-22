@@ -38,5 +38,11 @@ public class RevistaServiceImpl implements RevistaService {
 	public List<Revista> listarPorNombreLike(String nombre) {
 		return repository.listarPorNombreLike(nombre);
 	}
+
+	@Override
+	public List<Revista> listaConsultaDinamica(String nombre, String frecuencia, int idTipoRevista,
+			int estado, int idPais) {
+		return repository.listaConsultaDinamica(nombre, frecuencia, idTipoRevista, estado, idPais);
+	}
 	
 }

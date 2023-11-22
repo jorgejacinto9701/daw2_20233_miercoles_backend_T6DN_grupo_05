@@ -16,4 +16,6 @@ public interface RevistaService {
 	
 	public List<Revista> listarPorNombreLike(String nombre);
 
+	public List<Revista> listaConsultaDinamica(String nombre, String frecuencia, int idTipoRevista,
+			int estado, int idPais);
 }
