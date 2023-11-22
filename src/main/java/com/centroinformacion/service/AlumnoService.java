@@ -10,5 +10,8 @@ public interface AlumnoService {
     public abstract Alumno registrarOActualizarAlumnos(Alumno a);
     public abstract void eliminar(Alumno obj);
     public abstract Alumno buscarPorId(int id);
-
+    public abstract List<Alumno> filtrarAlumnos(String nombre, String dni, String correo, int idPais);
+    
+    
+    
 }

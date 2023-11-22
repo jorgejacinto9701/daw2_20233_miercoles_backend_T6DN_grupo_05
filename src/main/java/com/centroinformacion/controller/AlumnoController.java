@@ -121,5 +121,15 @@ public class AlumnoController {
 		}
 		return ResponseEntity.ok(salida);
 	}
+	
+	@GetMapping("/filtrarAlumnos")
+    @ResponseBody
+    public ResponseEntity<List<Alumno>> filtrarAlumnos(@RequestParam String nombre, @RequestParam String dni, @RequestParam String correo, @RequestParam int idPais){
+        nombre.trim();
+        dni.trim();
+        correo.trim();
+        List<Alumno> lista = alumnoService.filtrarAlumnos(nombre, dni, correo, idPais);
+        return ResponseEntity.ok(lista);
+    }
 
 }

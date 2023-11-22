@@ -34,4 +34,8 @@ public class AlumnoServiceImp implements AlumnoService {
     }
 
 	
+    @Override
+    public List<Alumno> filtrarAlumnos(String nombre, String dni, String correo, int idPais) {
+        return repository.filtrarAlumnos(nombre, dni, correo, idPais);
+    }
 }
