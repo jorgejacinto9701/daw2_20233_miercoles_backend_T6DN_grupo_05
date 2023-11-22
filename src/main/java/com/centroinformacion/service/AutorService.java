@@ -11,4 +11,5 @@ public interface AutorService {
     public List<Autor> buscarNombreLike(String nombre);
     public void eliminar(int id);
     public Autor buscarPorId(int id);
+    public List<Autor> buscarAutores(String nombre, String apellido, String pais, String estado);
 }

@@ -46,4 +46,9 @@ public class AutorServiceImp implements AutorService{
     public Autor buscarPorId(int id) {
         return serAutor.findById(id).orElse(null);
     }
+
+    @Override
+    public List<Autor> buscarAutores(String nombre, String apellido, String pais, String estado) {
+        return serAutor.buscarAutor(nombre, apellido, pais, estado);
+    }
 }

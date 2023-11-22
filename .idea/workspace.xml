@@ -5,13 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1c790260-4454-4fc9-bfc5-3433c59ba06c" name="Changes" comment="Crud libro completo">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/centroinformacion/controller/LibroConsultaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/centroinformacion/controller/AutorConsultaController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/centroinformacion/repository/LibroRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/centroinformacion/repository/LibroRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/centroinformacion/service/LibroService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/centroinformacion/service/LibroService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/centroinformacion/service/LibroServiceimp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/centroinformacion/service/LibroServiceimp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/centroinformacion/repository/AutorRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/centroinformacion/repository/AutorRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/centroinformacion/service/AutorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/centroinformacion/service/AutorService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/centroinformacion/service/AutorServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/centroinformacion/service/AutorServiceImp.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,20 +91,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;PC03-Medina&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/WS_DAWII_2023_2/daw2_20233_miercoles_backend_T6DN_grupo_05&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "D:/WS_DAWII_2023_2/daw2_20233_miercoles_backend_T6DN_grupo_05",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.0"
   }
-}</component>
-  <component name="RunManager">
+}]]></component>
+  <component name="RunManager" selected="Application.ProyectoDawiiBackendApplication">
     <configuration name="ProyectoDawiiBackendApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.centroinformacion.ProyectoDawiiBackendApplication" />
       <module name="ProyectoDAWIIBackend" />
@@ -129,6 +128,14 @@
     <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
       <module name="daw2_20233_miercoles_backend_T6DN_grupo_05" />
       <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProyectoDawiiBackendApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="ProyectoDAWIIBackend" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.centroinformacion.ProyectoDawiiBackendApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
