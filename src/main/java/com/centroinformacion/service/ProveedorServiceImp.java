@@ -1,6 +1,5 @@
 package com.centroinformacion.service;
 
-
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -40,4 +39,10 @@ public class ProveedorServiceImp implements ProveedorService {
 		return repository.listaPorRazonLike(razonsocial);
 	}
 
+	@Override
+	public List<Proveedor> listaConsultaDinamica(String razonsocial, String ruc, int estado, int idPais,
+			int idTipoProveedor) {
+		return repository.listaConsultaDinamica(razonsocial, ruc, estado, idPais, idTipoProveedor);
+	}
+	
 }
