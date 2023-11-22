@@ -23,7 +23,7 @@ public class RevistaConsultaController {
 	
 	@GetMapping()
 	@ResponseBody
-	public List<Revista> listaConsultaSala( 
+	public List<Revista> listaConsultaRevista( 
 			@RequestParam(name = "nombre" , required = false, defaultValue = "") String nombre,
 			@RequestParam(name = "frecuencia" , required = false, defaultValue = "") String frecuencia,
 			@RequestParam(name = "idTipoRevista" , required = false, defaultValue = "-1") int idTipoRevista,
