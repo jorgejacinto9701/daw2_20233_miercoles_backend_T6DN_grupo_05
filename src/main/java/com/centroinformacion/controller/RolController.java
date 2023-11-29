@@ -14,7 +14,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@Controller
+@RestController
 @RequestMapping("/url/rolOpcion")
 @CrossOrigin(origins = AppSettings.URL_CROSS_ORIGIN)
 public class RolController {
@@ -28,7 +28,7 @@ public class RolController {
         HashMap<String, Object> mapSalida = new HashMap<String, Object>();
 
         List<RolHasOpcion> validarOpcion = rolHasOpcionServiceImp.listaTodo();
-        if(validarOpcion.stream().anyMatch(u->u.getRol()== obj.getRol() && u.getOpcion() == obj.getOpcion())){
+        if(validarOpcion.stream().anyMatch(u->u.getRol().getIdRol()== obj.getRol().getIdRol() && u.getOpcion().getIdOpcion() == obj.getOpcion().getIdOpcion())){
             mapSalida.put("mensaje", "El rol ya tiene asiganda la opcion " + obj.getOpcion().getNombre());
         }else{
             RolHasOpcion salida = rolHasOpcionServiceImp.registrarRolHasOpcion(obj);
@@ -42,11 +42,18 @@ public class RolController {
         return  mapSalida;
     }
 
-    @DeleteMapping("/eliminar/{idOpcion}/{idRol}")
-    public ResponseEntity<Map<String, String>> eliminarOpcionRol(@PathVariable("idOpcion") int idOpcion, @PathVariable("idRol") int idRol){
+    @DeleteMapping("/eliminar/{idRol}/{idOpcion}")
+    public ResponseEntity<Map<String, String>> eliminarOpcionRol(@PathVariable("idRol") int idRol, @PathVariable("idOpcion") int idOpcion){
         HashMap<String, String> respuesta = new HashMap<>();
-        rolHasOpcionServiceImp.eliminarRolHasOpcion(idRol, idOpcion);
-        respuesta.put("mensaje","Opcion de rol eliminado");
+
+        try{
+            rolHasOpcionServiceImp.eliminarRolHasOpcion(idRol, idOpcion);
+            respuesta.put("mensaje","Opcion de rol eliminado");
+        }catch (Exception e){
+            respuesta.put("mensaje","No se pudo eliminar la opcion del rol");
+            e.printStackTrace();
+        }
+
         return ResponseEntity.ok(respuesta);
     }
 

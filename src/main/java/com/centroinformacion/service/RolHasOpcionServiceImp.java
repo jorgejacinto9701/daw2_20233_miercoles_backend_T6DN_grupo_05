@@ -7,12 +7,15 @@ import com.centroinformacion.entity.RolHasOpcionPK;
 import com.centroinformacion.repository.OpcionRepository;
 import com.centroinformacion.repository.RolHasOpcionRepository;
 import com.centroinformacion.repository.RolRepository;
+import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
+@Transactional
 public class RolHasOpcionServiceImp implements RolHasOpcionService{
 
     @Autowired
@@ -54,6 +57,14 @@ public class RolHasOpcionServiceImp implements RolHasOpcionService{
         RolHasOpcionPK id = new RolHasOpcionPK();
         id.setIdRol(idRol);
         id.setIdOpcion(idOpcion);
-        rolHasOpcionRepository.deleteById(id);
+
+        System.out.println("Intentando eliminar entidad con idRol: " + idRol + " e idOpcion: " + idOpcion);
+
+        Optional<RolHasOpcion> rolHasOpcionOptional = rolHasOpcionRepository.findById(id);
+        if (rolHasOpcionOptional.isPresent()) {
+            rolHasOpcionRepository.deleteById(id);
+        } else {
+            System.out.println("La entidad no existe.");
+        }
     }
 }
