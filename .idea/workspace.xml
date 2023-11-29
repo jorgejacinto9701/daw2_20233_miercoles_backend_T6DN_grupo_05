@@ -4,12 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1c790260-4454-4fc9-bfc5-3433c59ba06c" name="Changes" comment="Crud libro completo">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/centroinformacion/controller/AutorConsultaController.java" afterDir="false" />
+    <list default="true" id="1c790260-4454-4fc9-bfc5-3433c59ba06c" name="Changes" comment="consulta autor">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/centroinformacion/controller/RolController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/centroinformacion/repository/OpcionRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/centroinformacion/repository/RolHasOpcionRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/centroinformacion/repository/RolRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/centroinformacion/service/RolHasOpcionService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/centroinformacion/service/RolHasOpcionServiceImp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/centroinformacion/repository/AutorRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/centroinformacion/repository/AutorRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/centroinformacion/service/AutorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/centroinformacion/service/AutorService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/centroinformacion/service/AutorServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/centroinformacion/service/AutorServiceImp.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,13 +98,18 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "PC04__Cañari",
     "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "D:/WS_DAWII_2023_2/daw2_20233_miercoles_backend_T6DN_grupo_05",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.0"
+    "project.structure.side.proportion": "0.0",
+    "spring.configuration.checksum": "a72d698169663b3fc1caaa851162de7d",
+    "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RunManager" selected="Application.ProyectoDawiiBackendApplication">
@@ -145,6 +152,7 @@
         <item itemvalue="Application.ProyectoDawiiBackendApplication" />
         <item itemvalue="Application.ProyectoDawiiBackendApplication" />
         <item itemvalue="Application.ProyectoDawiiBackendApplication" />
+        <item itemvalue="Application.ProyectoDawiiBackendApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -156,6 +164,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1695255604474</updated>
+      <workItem from="1701264832443" duration="7212000" />
     </task>
     <task id="LOCAL-00001" summary="fix">
       <option name="closed" value="true" />
@@ -167,6 +176,9 @@
     </task>
     <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="RECENT_FILTERS">
