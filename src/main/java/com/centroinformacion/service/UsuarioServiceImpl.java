@@ -33,8 +33,14 @@ public class UsuarioServiceImpl implements UsuarioService{
 	}
 
 	@Override
-	public Usuario findById(int idUsuario) {
-		return repository.findById(idUsuario).orElse(null);
+	public List<Usuario> listarUsuarios() {
+		return repository.findAll();
 	}
+
+	@Override
+	public Usuario findById(int id) {
+		return repository.findById(id).orElse(null);
+	}
+
 
 }

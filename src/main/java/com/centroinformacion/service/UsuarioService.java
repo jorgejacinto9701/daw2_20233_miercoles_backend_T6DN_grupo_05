@@ -14,5 +14,7 @@ public interface UsuarioService {
 
 	public abstract Usuario buscaPorLogin(String login);
 	
-	public abstract Usuario findById(int idUsuario);
+	public abstract List<Usuario> listarUsuarios();
+	public abstract Usuario findById(int id);
+
 }
