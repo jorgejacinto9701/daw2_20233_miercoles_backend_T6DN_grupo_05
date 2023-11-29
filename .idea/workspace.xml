@@ -4,14 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1c790260-4454-4fc9-bfc5-3433c59ba06c" name="Changes" comment="Crud libro completo">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/centroinformacion/controller/LibroConsultaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="1c790260-4454-4fc9-bfc5-3433c59ba06c" name="Changes" comment="consulta autor">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/centroinformacion/controller/RolController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/centroinformacion/repository/OpcionRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/centroinformacion/repository/RolHasOpcionRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/centroinformacion/repository/RolRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/centroinformacion/service/RolHasOpcionService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/centroinformacion/service/RolHasOpcionServiceImp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/centroinformacion/repository/LibroRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/centroinformacion/repository/LibroRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/centroinformacion/service/LibroService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/centroinformacion/service/LibroService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/centroinformacion/service/LibroServiceimp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/centroinformacion/service/LibroServiceimp.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,20 +93,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;PC03-Medina&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/WS_DAWII_2023_2/daw2_20233_miercoles_backend_T6DN_grupo_05&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "PC04__Cañari",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "D:/WS_DAWII_2023_2/daw2_20233_miercoles_backend_T6DN_grupo_05",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.0",
+    "spring.configuration.checksum": "a72d698169663b3fc1caaa851162de7d",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RunManager">
+}]]></component>
+  <component name="RunManager" selected="Application.ProyectoDawiiBackendApplication">
     <configuration name="ProyectoDawiiBackendApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.centroinformacion.ProyectoDawiiBackendApplication" />
       <module name="ProyectoDAWIIBackend" />
@@ -133,8 +139,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ProyectoDawiiBackendApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="ProyectoDAWIIBackend" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.centroinformacion.ProyectoDawiiBackendApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ProyectoDawiiBackendApplication" />
         <item itemvalue="Application.ProyectoDawiiBackendApplication" />
         <item itemvalue="Application.ProyectoDawiiBackendApplication" />
         <item itemvalue="Application.ProyectoDawiiBackendApplication" />
@@ -149,6 +164,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1695255604474</updated>
+      <workItem from="1701264832443" duration="7212000" />
     </task>
     <task id="LOCAL-00001" summary="fix">
       <option name="closed" value="true" />
@@ -160,6 +176,9 @@
     </task>
     <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="RECENT_FILTERS">
