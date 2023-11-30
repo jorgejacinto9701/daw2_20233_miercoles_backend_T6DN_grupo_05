@@ -56,8 +56,8 @@ private LibroService libroService;
 	public ResponseEntity<Map<String, Object>> actualizalibro(@RequestBody Libro libro) {
 		Map<String, Object> salida = new HashMap<>();
 		try {
+			libro.setFechaActualizacion(new Date());
 			Libro objSalida =  libroService.actualiza(libro);
-            libro.setFechaActualizacion(new Date());
 			if (objSalida == null) {
 				salida.put("mensaje", "error al registro");
 			} else {
